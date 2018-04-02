@@ -1,0 +1,12 @@
+ function ReturnTokenToPortfolioManager(uint256 value)public payable{
+        
+     uint Tether=value*rate;
+     msg.sender.transfer(Tether);
+     
+     
+     toCheckbln[ToatlportfolioMAddress[0]]=toCheckbln[ToatlportfolioMAddress[0]]+value;
+     toCheckbln[msg.sender]=toCheckbln[msg.sender]-value;
+    FundToken(contractAddress).transferFrom(msg.sender,ToatlportfolioMAddress[0],value);
+    
+      
+    }
